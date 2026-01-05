@@ -6,7 +6,10 @@ import (
 )
 
 func main() {
-	user := model.User{ID: 1, Username: "Jack", Active: true}
-	fmt.Println("Usuário criado:")
-	fmt.Println(user)
+	user := model.User{ID: 1, Username: "John", Active: true}
+	if !user.IsValid() {
+		fmt.Println("Usuário inválido. Operação cancelada.")
+		return
+	}
+	fmt.Println("Usuário válido:", user)
 }
