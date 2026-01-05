@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	user := model.User{ID: 1, Username: "John", Active: true}
+	users := []model.User{{ID: 1, Username: "John", Active: true}, {ID: 2, Username: "Sarah", Active: true}, {ID: 1, Username: "", Active: true}}
+	fmt.Println("Lista de usuários válidos:")
+	for _, user := range users {
 	if !user.IsValid() {
-		fmt.Println("Usuário inválido. Operação cancelada.")
-		return
-	}
-	fmt.Println("Usuário válido:", user)
-}
+		continue}
+		fmt.Println(user)
+	}}
