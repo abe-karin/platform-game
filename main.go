@@ -14,7 +14,7 @@ func main() {
 		{ID: 4, Username: "", Active: true},
 	}
 	validUsers := service.FilterValidUsers(users)
-
+	fmt.Println("Valid Users:")
 	scores := []model.Score{
 		{UserID: 1, Points: 10},
 		{UserID: 2, Points: 20},
